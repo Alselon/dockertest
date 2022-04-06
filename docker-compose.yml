@@ -1,0 +1,22 @@
+version: '2'
+
+networks:
+  my_new_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: ${NETWORK_1_SUBNET_AND_MASK}
+          gateway: ${NETWORK_1_GATEWAY_IP_ADDRESS}
+
+services:
+  ubuntu:
+    build: ./ubuntu20.04-build/
+    ports:
+      - "80:80"
+    volumes:
+      - ./newsite.ru/:/var/www/newsite.ru
+      - ./nginx-conf/:/etc/nginx/conf.d
+      - ./logs/:/var/log/nginx/
+    networks: 
+      my_new_network:
+        ipv4_address: ${NETWORK_IP4_FOR_UBUNTU}

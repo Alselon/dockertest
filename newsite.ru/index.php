@@ -4,7 +4,7 @@
 #ini_set("html_errors", 1);
 #ini_set("log_errors", 1);
 #error_reporting(E_ERROR | E_PARSE | E_WARNING);
-#$con = mysqli_connect('172.16.0.1', 'docker_user', '112233Qw!', 'dockertest');
+#$con = mysqli_connect('172.30.0.1', 'docker_user', '112233Qw!', 'dockertest');
 #phpinfo();
 $configs = include('config.php');
 

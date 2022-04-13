@@ -1,0 +1,7 @@
+local_db_CONFIG_TPL=confs.php.tpl
+local_db_hostname="localhost.localdomane"
+local_db_host='172.30.0.1'
+local_db_name='dockertest'
+local_db_user='docker_user'
+local_db_pass='112233Qw!'
+local_db_some_url="http://127.0.0.1/index.php?a=1\&b=2\&c=3\&d=4"
